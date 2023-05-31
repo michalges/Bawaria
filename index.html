@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bawaria</title>
+		<link rel="stylesheet" href="styles/header.css">
+		<link rel="stylesheet" href="styles/sections.css">
+	</head>
+	<body>
+		<header>
+
+			<div id="mapa_div">
+
+				<img id="mapa" src="graphics/mapa.jpg">
+
+				<div id="pin_div_monachium" class="pin_div_outer">
+					<div class="pin_div_inner">
+						<p class="pin_text">Monachium</p>
+						<img class="pin" src="graphics/pinezka.png">
+					</div>
+				</div>
+				<div id="pin_div_salzburg" class="pin_div_outer">
+					<div class="pin_div_inner">
+						<p class="pin_text">Salzburg</p>
+						<img class="pin" src="graphics/pinezka.png">
+					</div>
+				</div>
+				<div id="pin_div_obsteig" class="pin_div_outer">
+					<div class="pin_div_inner">
+						<p class="pin_text">Obsteig</p>
+						<img class="pin" src="graphics/pinezka.png">
+					</div>
+				</div>
+
+			</div>
+
+			<h1>Bawaria</h1>
+
+			<div id="foglayer_01" class="fog">
+				<div class="image01"></div>
+				<div class="image02"></div>
+			</div>
+			<div id="foglayer_02" class="fog">
+				<div class="image01"></div>
+				<div class="image02"></div>
+			</div>
+			<div id="foglayer_03" class="fog">
+				<div class="image01"></div>
+				<div class="image02"></div>
+			</div>
+
+		</header>
+		
+		<section id="section_monachium">
+			<button class="section_hide_button"><img src="graphics/arrow.png"></button>
+			<div class="section_content">
+				<h3>Monachium</h3>
+				<div class="mapa_section_outer_div">
+					<div class="mapa_section_div">
+						<img class="mapa_section" src="graphics/mapa monachium.jpg">
+
+						<div id="pin_div_rezydencja" onclick="scrollToImage(this)" class="pin_div_atrakcja">
+							<p class="pin_text_atrakcja">Rezydencja</p>
+							<img class="pin_atrakcja" src="graphics/pinezka.png">
+						</div>
+					</div>
+				</div>
+				<h4 id="h4_rezydencja">Rezydencja</h4>
+				<img class="atrakcja_square_img" src="graphics/residenz-muenchen.jpg">
+				<img class="atrakcja_square_img" src="graphics/residenz-muenchen.jpg">
+			</div>
+			
+		</section>
+<!-- 
+		<section id="section_salzburg">
+			<button class="section_hide_button"><img src="graphics/arrow.png"></button>
+			<h3>Salzburg</h3>
+		</section>
+
+		<section id="section_obsteig">
+			<button class="section_hide_button"><img src="graphics/arrow.png"></button>
+			<h3>Obsteig</h3>
+		</section> -->
+
+		<script>
+			function scrollToImage(el) {
+				var id = el.id;
+				const imageElement = document.getElementById(transformString(id));
+				imageElement.scrollIntoView({ behavior: 'smooth' });
+			}
+
+			function transformString(inputString) {
+				const parts = inputString.split('_');
+				const transformedString = `h4_${parts[2]}`;
+				return transformedString;
+			}
+		  </script>
+
+		<script src="scripts/header.js"></script>
+		<script src="scripts/sections.js"></script>
+	</body>
+</html>
