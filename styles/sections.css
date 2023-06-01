@@ -144,12 +144,19 @@ h4::after{
 }
 
 .atrakcja_square_img{
-  display: inline-block;
-  float: left;
-  width: 40%;
-  height: 75vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.atrakcja_square_img img{
+  /* display: inline-block;
+  float: left; */
+  width: 30%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  margin: 0 5%;
 }
 
 
