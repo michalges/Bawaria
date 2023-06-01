@@ -5,6 +5,7 @@
 		<title>Bawaria</title>
 		<link rel="stylesheet" href="styles/header.css">
 		<link rel="stylesheet" href="styles/sections.css">
+		<link rel="stylesheet" href="styles/fullscreenImage.css">
 	</head>
 	<body>
 		<header>
@@ -63,17 +64,27 @@
 							<p class="pin_text_atrakcja">Rezydencja</p>
 							<img class="pin_atrakcja" src="graphics/pinezka.png">
 						</div>
+						<div id="pin_div_theatinerkirche" onclick="scrollToImage(this)" class="pin_div_atrakcja">
+							<p class="pin_text_atrakcja">Theatinerkirche</p>
+							<img class="pin_atrakcja" src="graphics/pinezka.png">
+						</div>
+						<div id="pin_div_frauenkirche" onclick="scrollToImage(this)" class="pin_div_atrakcja">
+							<p class="pin_text_atrakcja">Frauenkirche</p>
+							<img class="pin_atrakcja" src="graphics/pinezka.png">
+						</div>
 					</div>
 				</div>
 
 				<h4 id="h4_rezydencja">Rezydencja</h4>
+				<p class="atrakcja_opis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis nisi metus, at lobortis mi tristique nec. Ut fermentum dolor ligula. Ut vitae dui commodo tellus pulvinar commodo quis quis ante. Aenean a est nec nulla pellentesque scelerisque eget sit amet sapien. Donec ut rhoncus mi, ac dapibus libero. Phasellus ornare ex eget enim sagittis, ac mollis diam egestas. Curabitur gravida, velit id gravida fermentum, mauris est vulputate mi, in sollicitudin sem lectus at tellus. Cras elit nunc, semper a euismod et, rutrum id dui.</p>
 				<div class="atrakcja_square_img">
-					<img src="graphics/residenz-muenchen.jpg">
+					<img onclick="fullscreenImage(this)" src="graphics/residenz-muenchen.jpg">
 					<img src="graphics/residenz-muenchen.jpg">
 					<img src="graphics/residenz-muenchen.jpg">
 				</div>
 
 				<h4 id="h4_theatinerkirche">Theatinerkirche</h4>
+				<p class="atrakcja_opis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis nisi metus, at lobortis mi tristique nec. Ut fermentum dolor ligula. Ut vitae dui commodo tellus pulvinar commodo quis quis ante. Aenean a est nec nulla pellentesque scelerisque eget sit amet sapien. Donec ut rhoncus mi, ac dapibus libero. Phasellus ornare ex eget enim sagittis, ac mollis diam egestas. Curabitur gravida, velit id gravida fermentum, mauris est vulputate mi, in sollicitudin sem lectus at tellus. Cras elit nunc, semper a euismod et, rutrum id dui.</p>
 				<div class="atrakcja_square_img">
 					<img src="graphics/residenz-muenchen.jpg">
 					<img src="graphics/residenz-muenchen.jpg">
@@ -81,6 +92,7 @@
 				</div>
 
 				<h4 id="h4_frauenkirche">Frauenkirche</h4>
+				<p class="atrakcja_opis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis nisi metus, at lobortis mi tristique nec. Ut fermentum dolor ligula. Ut vitae dui commodo tellus pulvinar commodo quis quis ante. Aenean a est nec nulla pellentesque scelerisque eget sit amet sapien. Donec ut rhoncus mi, ac dapibus libero. Phasellus ornare ex eget enim sagittis, ac mollis diam egestas. Curabitur gravida, velit id gravida fermentum, mauris est vulputate mi, in sollicitudin sem lectus at tellus. Cras elit nunc, semper a euismod et, rutrum id dui.</p>
 				<div class="atrakcja_square_img">
 					<img src="graphics/residenz-muenchen.jpg">
 					<img src="graphics/residenz-muenchen.jpg">
@@ -100,6 +112,10 @@
 			<h3>Obsteig</h3>
 		</section> -->
 
+		<div id="fullscreen_image_div">
+			<img id="fullscreen_image">
+		</div>
+
 		<script>
 			function scrollToImage(el) {
 				var id = el.id;
@@ -116,5 +132,6 @@
 
 		<script src="scripts/header.js"></script>
 		<script src="scripts/sections.js"></script>
+		<script src="scripts/fullscreenImage.js"></script>
 	</body>
 </html>
