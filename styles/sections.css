@@ -1,0 +1,349 @@
+section{
+    width: 98vw;
+    height: calc(100vh - 1vw);
+    position: absolute;
+    top: 100vh;
+/*    top: 1vw;*/
+    transition: 1s;
+    background-color: white;
+    border-radius: 3vw 3vw 0 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 0px 0px 61px -50px rgba(66, 68, 90, 1);
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    transform: translateZ(0);
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
+}
+
+.section_hide_button{
+    width: 100%;
+    height: 3vw;
+    border-radius: 3vw 3vw 0 0;
+    background-color: white;
+    border: 0;
+    transition: 0.2s ease-out;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.4);
+}
+
+.section_hide_button:hover{
+    background-color: #F0EFEF;
+}
+
+.section_hide_button img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1vw;
+}
+
+.section_content{
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+h3{
+    width: 100%;
+    font-size: 5vw;
+    font-family: 'NewYork';
+    font-weight: lighter;
+    text-align: center;
+    padding: 0 1vw;
+}
+
+h3::before{
+  content: "------------";
+  color: transparent;
+  background-image: url("/graphics/line.png");
+  background-repeat: repeat-x;
+  background-position: center center;
+  margin-right: 20px;
+}
+
+h3::after{
+  content: "------------";
+  color: transparent;
+  background-image: url("/graphics/line.png");
+  background-repeat: repeat-x;
+  background-position: center center;
+  margin-left: 20px;
+}
+
+.mapa_section_outer_div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+}
+
+.mapa_section_div{
+  width: 52.5vw;
+  height: 35vw;
+  position: relative;
+}
+
+.mapa_section{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pin_div_atrakcja{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pin_text_atrakcja{
+  letter-spacing: 0;
+  font-size: 0.8vw;
+  text-align: center;
+}
+
+.pin_atrakcja{
+  width: calc(2vw);
+  height: calc(3vw);
+  object-fit: contain;
+}
+
+#pin_div_rezydencja{top: 10%; left: 10%;}
+#pin_div_theatinerkirche{top: 50%; left: 50%;}
+#pin_div_frauenkirche{top: 20%; left: 10%;}
+
+h4{
+  width: 100%;
+  font-size: 4vw;
+  font-family: 'NewYork';
+  font-weight: lighter;
+  text-align: center;
+  padding: 40px;
+ 
+}
+
+h4::before{
+  content: "--------------";
+  color: transparent;
+  background-image: url("/graphics/line.png");
+  background-repeat: repeat-x;
+  background-position: center center;
+  margin-right: 20px;
+}
+
+h4::after{
+  content: "--------------";
+  color: transparent;
+  background-image: url("/graphics/line.png");
+  background-repeat: repeat-x;
+  background-position: center center;
+  margin-left: 20px;
+}
+
+.atrakcja_opis{
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.atrakcja_square_img{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 5vw;
+}
+
+.atrakcja_square_img img{
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Fog ---------- */
+  #foglayer_01, #foglayer_02, #foglayer_03 {
+    height: 100%;
+    position: absolute;
+    width: 200%;
+    filter: brightness(40%);
+    pointer-events: none;
+  }
+  #foglayer_01 .image01, #foglayer_01 .image02,
+  #foglayer_02 .image01, #foglayer_02 .image02,
+  #foglayer_03 .image01, #foglayer_03 .image02 {
+    float: left;
+    height: 100%;
+    width: 50%;
+  }
+  #foglayer_01 {
+    -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+    -moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+    animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  }
+  #foglayer_02, #foglayer_03 {
+    -webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+    -moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+    animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  }
+  
+  /* ---------- Moving Fog ---------- */
+  /*
+    'size: cover' || 'size: 100%'; results remain the same
+    'attachment: scroll' can be added or removed; results remain the same
+    'attachment: fixed' causing unexpected results in Chrome
+    'repeat-x' || 'no-repeat'; results remain the same
+  */ 
+  #foglayer_01 .image01, #foglayer_01 .image02 {
+    background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png") center center/cover no-repeat transparent;
+  }
+  #foglayer_02 .image01, #foglayer_02 .image02,
+  #foglayer_03 .image01, #foglayer_03 .image02{
+    background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png") center center/cover no-repeat transparent;
+  }
+  
+  /* ---------- Keyframe Layer 1 ---------- */
+  @-webkit-keyframes foglayer_01_opacity {
+    0% { opacity: .1; }
+    22% { opacity: .5; }
+    40% { opacity: .28; }
+    58% { opacity: .4; }
+    80% { opacity: .16; }
+    100% { opacity: .1; }
+  }
+  @-moz-keyframes foglayer_01_opacity {
+    0% { opacity: .1; }
+    22% { opacity: .5; }
+    40% { opacity: .28; }
+    58% { opacity: .4; }
+    80% { opacity: .16; }
+    100% { opacity: .1; }
+  }
+  @-o-keyframes foglayer_01_opacity {
+    0% { opacity: .1; }
+    22% { opacity: .5; }
+    40% { opacity: .28; }
+    58% { opacity: .4; }
+    80% { opacity: .16; }
+    100% { opacity: .1; }
+  }
+  @keyframes foglayer_01_opacity {
+    0% { opacity: .1; }
+    22% { opacity: .5; }
+    40% { opacity: .28; }
+    58% { opacity: .4; }
+    80% { opacity: .16; }
+    100% { opacity: .1; }
+  }
+  /* ---------- Keyframe Layer 2 ---------- */
+  @-webkit-keyframes foglayer_02_opacity {
+    0% { opacity: .5; }
+    25% { opacity: .2; }
+    50% { opacity: .1; }
+    80% { opacity: .3; }
+    100% { opacity: .5; }
+  }
+  @-moz-keyframes foglayer_02_opacity {
+    0% { opacity: .5; }
+    25% { opacity: .2; }
+    50% { opacity: .1; }
+    80% { opacity: .3; }
+    100% { opacity: .5; }
+  }
+  @-o-keyframes foglayer_02_opacity {
+    0% { opacity: .5; }
+    25% { opacity: .2; }
+    50% { opacity: .1; }
+    80% { opacity: .3; }
+    100% { opacity: .5; }
+  }
+  @keyframes foglayer_02_opacity {
+    0% { opacity: .5; }
+    25% { opacity: .2; }
+    50% { opacity: .1; }
+    80% { opacity: .3; }
+    100% { opacity: .5; }
+  }
+  /* ---------- Keyframe Layer 3 ---------- */
+  @-webkit-keyframes foglayer_03_opacity {
+    0% { opacity: .8 }
+    27% { opacity: .2; }
+    52% { opacity: .6; }
+    68% { opacity: .3; }
+    100% { opacity: .8; }
+  }
+  @-moz-keyframes foglayer_03_opacity {
+    0% { opacity: .8 }
+    27% { opacity: .2; }
+    52% { opacity: .6; }
+    68% { opacity: .3; }
+    100% { opacity: .8; }
+  }
+  @-o-keyframes foglayer_03_opacity {
+    0% { opacity: .8 }
+    27% { opacity: .2; }
+    52% { opacity: .6; }
+    68% { opacity: .3; }
+    100% { opacity: .8; }
+  }
+  @keyframes foglayer_03_opacity {
+    0% { opacity: .8; }
+    27% { opacity: .2; }
+    52% { opacity: .6; }
+    68% { opacity: .3; }
+    100% { opacity: .8; }
+  }
+  /* ---------- Keyframe moveMe ---------- */
+  @-webkit-keyframes foglayer_moveme {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
+  @-moz-keyframes foglayer_moveme {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
+  @-o-keyframes foglayer_moveme {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
+  @keyframes foglayer_moveme {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
+  
+  @media only screen
+    and (min-width: 280px)
+    and (max-width: 767px) {
+      #foglayer_01 .image01, #foglayer_01 .image02,
+      #foglayer_02 .image01, #foglayer_02 .image02,
+      #foglayer_03 .image01, #foglayer_03 .image02 {
+        width: 100%;
+      }
+    }
