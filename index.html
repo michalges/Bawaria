@@ -9,51 +9,114 @@
 	</head>
 	<body>
 		<header>
-
-			<div id="mapa_div">
-
-				<img id="mapa" src="graphics/mapa.jpg">
-
-				<div id="pin_div_monachium" class="pin_div_outer">
-					<div class="pin_div_inner">
-						<p class="pin_text">Monachium</p>
-						<img class="pin" src="graphics/pinezka.png">
-					</div>
-				</div>
-				<div id="pin_div_salzburg" class="pin_div_outer">
-					<div class="pin_div_inner">
-						<p class="pin_text">Salzburg</p>
-						<img class="pin" src="graphics/pinezka.png">
-					</div>
-				</div>
-				<div id="pin_div_obsteig" class="pin_div_outer">
-					<div class="pin_div_inner">
-						<p class="pin_text">Obsteig</p>
-						<img class="pin" src="graphics/pinezka.png">
-					</div>
-				</div>
-
-			</div>
-
 			<h1>Bawaria</h1>
-
-			<div id="foglayer_01" class="fog">
-				<div class="image01"></div>
-				<div class="image02"></div>
-			</div>
-			<div id="foglayer_02" class="fog">
-				<div class="image01"></div>
-				<div class="image02"></div>
-			</div>
-			<div id="foglayer_03" class="fog">
-				<div class="image01"></div>
-				<div class="image02"></div>
-			</div>
-
+			<div id="header_img_1" class="header_img"></div>
+			<div id="header_img_2" class="header_img"></div>
+			<button id="header_button"></button>
 		</header>
-		
-		<section id="section_monachium">
-			<button class="section_hide_button"><img src="graphics/arrow.png"></button>
+
+		<div id="dni_placeholder"></div>
+
+		<div id="dni_div">
+			<h2>Dzień 1</h2>
+			<div class="dzien_div">
+				<div class="card" onclick="show_section('section_monachium')">
+					<img src="graphics/zdjecia/Dzien 1/Monachium/main.JPG">
+					<h5>Monachium</h5>
+					<p>Opis Monachium</p>
+					<div></div>
+				</div>
+				<div class="card" onclick="show_section('section_nymphenburg')">
+					<img src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (1).JPG">
+					<h5>Nymphenburg</h5>
+					<p>Znajdująca się na obrzeżach Monachium letnia rezydencja rodziny Wittelsbachów Nymphenburg jest rozległym kompleksem pałacowo-parkowym. Prace budowlane nad pałacem rozpoczęły się w 1664 roku, ale swoją ostateczną postać przybrał po wielu przebudowach i rozbudowach na przestrzeni niemal 200 lat. Pałac i Park Nymphenburg można dziś określić jako jeden z najciekawszych kompleksów pałacowych w naszej części Europy.</p>
+					<div></div>
+				</div>
+			</div>
+
+			<h2>Dzień 2</h2>
+			<div class="dzien_div">
+				<div class="card" onclick="show_section('section_neuschwanstein')">
+					<img src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (4).jpg">
+					<h5>Neuschwanstein</h5>
+					<p>Zamek Neuschwanstein jest położony w południowej Bawarii, przy granicy z Austrią. Jest to jeden, przez wielu uważany za najpiękniejszy, z zamków króla bawarskiego Ludwika II Wittelsbacha. 
+					Założeniem było stworzenie wyidealizowanego średniowiecznego zameku rycerskiego. Budowę rozpoczęto w 1869 roku i nigdy jej nie ukończono - po śmierci Ludwika II w 1886 roku zaprzestano prac. 
+					Jednak z czasem Neuschwanstein stał się jedną z najpopularniejszych niemieckich atrakcji turystycznych i symbolem Bawarii.</p>
+					<div></div>
+				</div>
+				<div class="card" onclick="show_section('section_wies')">
+					<img src="graphics/zdjecia/Dzien 2/Wies/8.jpg">
+					<h5>Wies</h5>
+					<p>Kościół pod wezwaniem Biczowanego Zbawiciela w Wies (niem. Wieskirche) to niezwykle malownicza bawarska świątynia. Budowla wzniesiona została w latach 1745-1754 w miejscu, które było świadkiem cudu w 1738 roku. 
+					Jest to jeden z najznamienitszych przykładów sztuki rokoko w Niemczech. Z tego powodu w 1983 kościół został wpisany na Listę Światowego Dziedzictwa UNESCO. 
+					Dziś zachwyca on jasnością wnętrza oraz bogato zdobionymi sztukateriami i imponującymi freskami.</p>
+					<div></div>
+				</div>
+				<div class="card" onclick="show_section('section_fussen')">
+					<img src="graphics/zdjecia/Dzien 2/Fussen/8.jpg">
+					<h5>Füssen</h5>
+					<p>Füssen to niewielkie bawarskie miasto położone zaledwie kilometr od granicy z Austrią. Jest znane nie tylko z barokowego klasztoru oraz zamku obronnego, ale i również z podliskich wodospadów i wąwozów.
+					Początkowo wspomagały one pracę lokalnych młynów, a dziś są częścią systemu pozyskiwania energii. Wśród nich zjawiskowy wodospad Lechfall, który intryguje swoim kształtem przypominającym schody oraz jasno niebieskim kolorem wody.</p>
+					<div></div>
+				</div>
+				<div class="card" onclick="show_section('section_oberammergau')">
+					<img src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (3).jpg">
+					<h5>Oberammergau</h5>
+					<p>W alpejskim miasteczku Oberammergau dominuje typowa bawarska zabudowa – piętrowe lub dwupiętrowe białe domy ze spadzistymi dachami, drewnianymi balkonami, okiennicami. Elewacje wielu budynków ożywiają kolorowe malowidła. 
+					Przedstawiają one wydarzenia religijne, sztukę pasyjną, ale też wiele mówią o nazwiskach czy zawodach właścicieli domów. Oberammergau warto również odwiedzić dla barokowego kościóła św. Piotra i Pawła.</p>
+					<div></div>
+				</div>
+			</div>
+
+			<h2>Dzień 3</h2>
+			<div class="dzien_div">
+				<div class="card" onclick="show_section('section_partnach')">
+					<img src="graphics/zdjecia/Dzien 3/Partnach/Partnach (5).jpg">
+					<h5>Partnach</h5>
+					<p>Leżąca u podnóża Alp miejscowość Garmisch-Partenkirchen znana jest głównie jako ośrodek narciarski. Nieopodal miejscowości znajduje się także mniej znana atrakcja, będący prawdziwym cudem natury wąwóz Partnach (niem. Partnachklamm). 
+					Jego głębokość to ok. 80 metrów, a długość - ponad 700 metrów. Jego dnem, z ogromną siłą, płynie bardzo silnie spiętrzona rzeka Partnach. Wykute w skale ścieżki, z których widać rwący nurt dzikiego potoku, robią niesamowite wrażenie.</p>
+					<div></div>
+				</div>
+				<div class="card" onclick="show_section('section_ettal')">
+					<img src="graphics/zdjecia/Dzien 3/Ettal/Ettal (1).jpg">
+					<h5>Ettal</h5>
+					<p>Ettal to niewielka miejscowość nieopodal Garmisch-Partenkirchen. Jednym z ciekawszych zabytków jest, znajdujący się w samym sercu miasteczka, okazały barokowy kompleks klasztorny. Świątynia założona została 28 kwietnia 1330 roku. 
+					Jednak jej oryginalny wygląd nie zachował się - klasztor uległ zniszczeniu. Odbudowano ją w stylu barokowym, który przytłacza bogactwem.</p>
+					<div></div>
+				</div>
+				<div class="card" onclick="show_section('section_linderhof')">
+					<img src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (4).JPG">
+					<h5>Linderhof</h5>
+					<p>Linderhof to niewielki neobarokowy pałac, położony w południowo-zachodniej Bawarii w pobliży miasteczka Ettal. Rezydencja ta wzniesiona została w drugiej połowie XIX wieku na polecenie króla Ludwika II Bawarskiego.
+					Niewielka rezydencja wygląda niczym pałacyk wyjęty z bajki. Jeszcze bardziej niezwykłe są pełne przepychu wnętrza. Całość zaś, otoczona została malowniczym 50 hektarowym parkiem krajobrazowym z przepięknymi ogrodami łączącymi w sobie style baroku i włoskiego renesansu</p>
+					<div></div>
+				</div>
+			</div>
+
+			<h2>Dzień 4</h2>
+			<div class="dzien_div">
+				<div class="card" onclick="show_section('section_herrenchiemsee')">
+					<img src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (1).jpg">
+					<h5>Herrenchiemsee</h5>
+					<p>Pałac Herrenchiemsee (Schloss Herrenchiemsee) jest najmłodszą z trzech rezydencji zbudowanych przez Ludwika II Wittelsbacha. Kompleks powstał na wyspie Herrenchiemsee nad Jeziorem Chiemsee. 
+					W porównaniu do Zamku Neuschwanstein i Pałacu Linderhof, wzorowany na pałacu w Wersalu, Herrenchiemsee nie wyróżnia się tak mocno zewnętrzną fasadą. Jednak w środku można odnaleźć prawdziwe skarby i dzieła sztuki.</p>
+					<div></div>
+				</div>
+				<div class="card" onclick="show_section('section_salzburg')">
+					<img src="graphics/photos/residenz-muenchen_festsaalbau.jpg">
+					<h5>Salzburg</h5>
+					<p>Opis salzburg</p>
+					<div></div>
+				</div>
+			</div>
+			<div style="width: 100%; height: 3vw;"></div>
+		</div>
+
+		<footer></footer>
+
+		<!-- Dzien 1 Dzien 1 Dzien 1 Dzien 1 Dzien 1 Dzien 1 Dzien 1 Dzien 1 Dzien 1 Dzien 1 Dzien 1 -->
+		<section loading="lazy" id="section_monachium">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
 			<div class="section_content">
 				<h3>Monachium</h3>
 				<div class="mapa_section_outer_div">
@@ -62,55 +125,301 @@
 
 						<div id="pin_div_rezydencja" onclick="scrollToImage(this)" class="pin_div_atrakcja">
 							<p class="pin_text_atrakcja">Rezydencja</p>
-							<img class="pin_atrakcja" src="graphics/pinezka.png">
+							<img class="pin_atrakcja" src="graphics/UI/pinezka.png">
 						</div>
 						<div id="pin_div_theatinerkirche" onclick="scrollToImage(this)" class="pin_div_atrakcja">
 							<p class="pin_text_atrakcja">Theatinerkirche</p>
-							<img class="pin_atrakcja" src="graphics/pinezka.png">
+							<img class="pin_atrakcja" src="graphics/UI/pinezka.png">
 						</div>
 						<div id="pin_div_frauenkirche" onclick="scrollToImage(this)" class="pin_div_atrakcja">
 							<p class="pin_text_atrakcja">Frauenkirche</p>
-							<img class="pin_atrakcja" src="graphics/pinezka.png">
+							<img class="pin_atrakcja" src="graphics/UI/pinezka.png">
 						</div>
 					</div>
 				</div>
 
 				<h4 id="h4_rezydencja">Rezydencja</h4>
-				<p class="atrakcja_opis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis nisi metus, at lobortis mi tristique nec. Ut fermentum dolor ligula. Ut vitae dui commodo tellus pulvinar commodo quis quis ante. Aenean a est nec nulla pellentesque scelerisque eget sit amet sapien. Donec ut rhoncus mi, ac dapibus libero. Phasellus ornare ex eget enim sagittis, ac mollis diam egestas. Curabitur gravida, velit id gravida fermentum, mauris est vulputate mi, in sollicitudin sem lectus at tellus. Cras elit nunc, semper a euismod et, rutrum id dui.</p>
+				<p class="atrakcja_opis">Pałac stojący przy Max-Joseph-Platz jest byłą rezydencją bawarskiej dynastii WittelsbachówW rzeczywistości jest to olbrzymi kompleks budynków i dziedzińców, zawierący teatr, halę koncertową oraz kaplicę. Rezydencja została zniszczona podczas II wojny światowej. Jej większa część została do dnia dzisiejszego odbudowana, jednak miejscami można odnaleźć surowe pomieszczenia świadczące o burzliwej historii budynku.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (1).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (2).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (3).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (4).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (5).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (6).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (7).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (8).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (12).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (17).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (20).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Rezydencja/Rezydencja (21).JPG">
+				</div>
+
+				<h4 id="h4_theatinerkirche">Theatinerkirche</h4>
+				<p class="atrakcja_opis">Jedną z najwspanialszych świątyń stolicy Bawarii jest kościoł pw. św Kajetana. Stojący przy placu Odeonsplatz kościół został zbudowany pod koniec XVII. Charakterystyczna żółtawa fasada oraz pozbawione koloru barokowe wnętrze stały się jednym z symboli miasta.
+					</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (2).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (4).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (5).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (6).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (7).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (8).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (9).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (10).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Theatinerkirche/Thetinerkirche (15).JPG">
+				</div>
+
+				<h4 id="h4_frauenkirche">Frauenkirche</h4>
+				<p class="atrakcja_opis">Frauenkirche, czyli górująca nad Monachium katedra ze swymi uciętymi wieżami jest niewątpliwie jedną z najbardziej znanych tutejszych budowli i wizytówką miasta. Jest głównym kościołem i katedrą kościelnych prowincji południowej Bawarii. W 1944 roku kościół został zburzony, od tego czasu jest systematycznie rekonstruowany i odnawiany.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Frauenkirche/Frauenkirche (1).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Frauenkirche/Frauenkirche (3).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Frauenkirche/Frauenkirche (5).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Frauenkirche/Frauenkirche (6).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Frauenkirche/Frauenkirche (8).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/Monachium/Frauenkirche/Frauenkirche (10).JPG">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+
+		<section loading="lazy" id="section_nymphenburg">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Nymphenburg</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">Znajdująca się na obrzeżach Monachium letnia rezydencja rodziny Wittelsbachów Nymphenburg jest rozległym kompleksem pałacowo-parkowym. Prace budowlane nad pałacem rozpoczęły się w 1664 roku, ale swoją ostateczną postać przybrał po wielu przebudowach i rozbudowach na przestrzeni niemal 200 lat. Pałac i Park Nymphenburg można dziś określić jako jeden z najciekawszych kompleksów pałacowych w naszej części Europy.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (1).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (3).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (4).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (5).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (6).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (8).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (9).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (10).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 1/nymphenburg/Nymphenburg (11).JPG">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+
+		<!-- Dzień 2 Dzień 2 Dzień 2 Dzień 2 Dzień 2 Dzień 2 Dzień 2 Dzień 2 Dzień 2 Dzień 2 Dzień 2 -->
+		<section loading="lazy" id="section_neuschwanstein">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Zamek Neuschwanstein</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">Zamek Neuschwanstein jest położony w południowej Bawarii, przy granicy z Austrią. Jest to jeden, przez wielu uważany za najpiękniejszy, z zamków króla bawarskiego Ludwika II Wittelsbacha. 
+				Założeniem było stworzenie wyidealizowanego średniowiecznego zameku rycerskiego. Budowę rozpoczęto w 1869 roku i nigdy jej nie ukończono - po śmierci Ludwika II w 1886 roku zaprzestano prac. 
+				Jednak z czasem Neuschwanstein stał się jedną z najpopularniejszych niemieckich atrakcji turystycznych i symbolem Bawarii.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (1).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (2).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (3).jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (4).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (5).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (5).jpg">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+		<section loading="lazy" id="section_wies">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Wies</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">Kościół pod wezwaniem Biczowanego Zbawiciela w Wies (niem. Wieskirche) to niezwykle malownicza bawarska świątynia. Budowla wzniesiona została w latach 1745-1754 w miejscu, które było świadkiem cudu w 1738 roku. 
+				Jest to jeden z najznamienitszych przykładów sztuki rokoko w Niemczech. Z tego powodu w 1983 kościół został wpisany na Listę Światowego Dziedzictwa UNESCO. 
+				Dziś zachwyca on jasnością wnętrza oraz bogato zdobionymi sztukateriami i imponującymi freskami.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Wies/2.jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Wies/3.jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Wies/5.jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Wies/6.jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Wies/7.jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Wies/8.jpg">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+		<section loading="lazy" id="section_fussen">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Füssen</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">Füssen to niewielkie bawarskie miasto położone zaledwie kilometr od granicy z Austrią. Jest znane nie tylko z barokowego klasztoru oraz zamku obronnego, ale i również z podliskich wodospadów i wąwozów.
+				Początkowo wspomagały one pracę lokalnych młynów, a dziś są częścią systemu pozyskiwania energii. Wśród nich zjawiskowy wodospad Lechfall, który intryguje swoim kształtem przypominającym schody oraz jasno niebieskim kolorem wody.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Fussen/8.jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Fussen/9.jpg">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+		<section loading="lazy" id="section_oberammergau">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Oberammergau</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">W alpejskim miasteczku Oberammergau dominuje typowa bawarska zabudowa – piętrowe lub dwupiętrowe białe domy ze spadzistymi dachami, drewnianymi balkonami, okiennicami. Elewacje wielu budynków ożywiają kolorowe malowidła. 
+				Przedstawiają one wydarzenia religijne, sztukę pasyjną, ale też wiele mówią o nazwiskach czy zawodach właścicieli domów. Oberammergau warto również odwiedzić dla barokowego kościóła św. Piotra i Pawła.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (1).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (2).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (3).jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (4).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (7).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (8).jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (9).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (12).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (13).jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (15).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (16).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (17).jpg">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+
+		<!-- Dzień 3 Dzień 3 Dzień 3 Dzień 3 Dzień 3 Dzień 3 Dzień 3 Dzień 3 Dzień 3 Dzień 3 Dzień 3 Dzień 3 -->
+		<section loading="lazy" id="section_partnach">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Partnach</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">Leżąca u podnóża Alp miejscowość Garmisch-Partenkirchen znana jest głównie jako ośrodek narciarski. Nieopodal miejscowości znajduje się także mniej znana atrakcja, będący prawdziwym cudem natury wąwóz Partnach (niem. Partnachklamm). 
+				Jego głębokość to ok. 80 metrów, a długość – ponad 700 metrów. Jego dnem, z ogromną siłą, płynie bardzo silnie spiętrzona rzeka Partnach. Wykute w skale ścieżki, z których widać rwący nurt dzikiego potoku, robią niesamowite wrażenie.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (3).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (5).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (6).jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (7).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (8).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (9).jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (10).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (11).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Partnach/Partnach (13).jpg">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+		<section loading="lazy" id="section_ettal">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Ettal</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">Ettal to niewielka miejscowość nieopodal Garmisch-Partenkirchen. Jednym z ciekawszych zabytków jest, znajdujący się w samym sercu miasteczka, okazały barokowy kompleks klasztorny. Świątynia założona została 28 kwietnia 1330 roku. 
+				Jednak jej oryginalny wygląd nie zachował się - klasztor uległ zniszczeniu. Odbudowano ją w stylu barokowym, który przytłacza bogactwem.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Ettal/Ettal (1).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Ettal/Ettal (2).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Ettal/Ettal (3).jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Ettal/Ettal (5).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Ettal/Ettal (8).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Ettal/Ettal (10).jpg">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+		<section loading="lazy" id="section_linderhof">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Linderhof</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">Linderhof to niewielki neobarokowy pałac, położony w południowo-zachodniej Bawarii w pobliży miasteczka Ettal. Rezydencja ta wzniesiona została w drugiej połowie XIX wieku na polecenie króla Ludwika II Bawarskiego.
+				Niewielka rezydencja wygląda niczym pałacyk wyjęty z bajki. Jeszcze bardziej niezwykłe są pełne przepychu wnętrza. Całość zaś, otoczona została malowniczym 50 hektarowym parkiem krajobrazowym z przepięknymi ogrodami łączącymi w sobie style baroku i włoskiego renesansu.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (2).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (3).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (4).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (5).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (6).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (7).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (8).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (9).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 3/Linderhof/Linderhof (11).JPG">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+
+		<!-- Dzień 4 Dzień 4 Dzień 4 Dzień 4 Dzień 4 Dzień 4 Dzień 4 Dzień 4 Dzień 4 Dzień 4 Dzień 4 -->
+		<section loading="lazy" id="section_herrenchiemsee">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Herrenchiemsee</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">Pałac Herrenchiemsee (Schloss Herrenchiemsee) jest najmłodszą z trzech rezydencji zbudowanych przez Ludwika II Wittelsbacha. Kompleks powstał na wyspie Herrenchiemsee nad Jeziorem Chiemsee. 
+				W porównaniu do Zamku Neuschwanstein i Pałacu Linderhof, wzorowany na pałacu w Wersalu, Herrenchiemsee nie wyróżnia się tak mocno zewnętrzną fasadą. Jednak w środku można odnaleźć prawdziwe skarby i dzieła sztuki.</p>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (1).jpg">
+					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (3).jpg">
+					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (5).jpg">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (6).jpg">
+					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (7).jpg">
+					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (8).jpg">
+				</div>
+				<div style="width: 100%; height: 3vw;"></div>
+			</div>
+		</section>
+		<section loading="lazy" id="section_salzburg">
+			<button class="section_hide_button"><img src="graphics/UI/arrow.png"></button>
+			<div class="section_content">
+				<h3>Salzburg</h3>
+				<div style="width: 100%; height: 2vw;"></div>
+				<p class="atrakcja_opis">tak</p>
 				<div class="atrakcja_square_img">
 					<img onclick="fullscreenImage(this)" src="graphics/photos/residenz-muenchen.jpg">
 					<img onclick="fullscreenImage(this)" src="graphics/photos/Muenchen-Residenz-bjs-1.jpg">
 					<img onclick="fullscreenImage(this)" src="graphics/photos/residenz-muenchen_festsaalbau.jpg">
 				</div>
-
-				<h4 id="h4_theatinerkirche">Theatinerkirche</h4>
-				<p class="atrakcja_opis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis nisi metus, at lobortis mi tristique nec. Ut fermentum dolor ligula. Ut vitae dui commodo tellus pulvinar commodo quis quis ante. Aenean a est nec nulla pellentesque scelerisque eget sit amet sapien. Donec ut rhoncus mi, ac dapibus libero. Phasellus ornare ex eget enim sagittis, ac mollis diam egestas. Curabitur gravida, velit id gravida fermentum, mauris est vulputate mi, in sollicitudin sem lectus at tellus. Cras elit nunc, semper a euismod et, rutrum id dui.</p>
-				<div class="atrakcja_square_img">
-					<img onclick="fullscreenImage(this)" src="graphics/residenz-muenchen.jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/residenz-muenchen.jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/residenz-muenchen.jpg">
-				</div>
-
-				<h4 id="h4_frauenkirche">Frauenkirche</h4>
-				<p class="atrakcja_opis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis nisi metus, at lobortis mi tristique nec. Ut fermentum dolor ligula. Ut vitae dui commodo tellus pulvinar commodo quis quis ante. Aenean a est nec nulla pellentesque scelerisque eget sit amet sapien. Donec ut rhoncus mi, ac dapibus libero. Phasellus ornare ex eget enim sagittis, ac mollis diam egestas. Curabitur gravida, velit id gravida fermentum, mauris est vulputate mi, in sollicitudin sem lectus at tellus. Cras elit nunc, semper a euismod et, rutrum id dui.</p>
-				<div class="atrakcja_square_img">
-					<img onclick="fullscreenImage(this)" src="graphics/residenz-muenchen.jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/residenz-muenchen.jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/residenz-muenchen.jpg">
-				</div>
+				<div style="width: 100%; height: 3vw;"></div>
 			</div>
-			
-		</section>
-<!-- 
-		<section id="section_salzburg">
-			<button class="section_hide_button"><img src="graphics/arrow.png"></button>
-			<h3>Salzburg</h3>
 		</section>
 
-		<section id="section_obsteig">
-			<button class="section_hide_button"><img src="graphics/arrow.png"></button>
-			<h3>Obsteig</h3>
-		</section> -->
+
+
+		
 
 		<div id="fullscreen_image_div">
 			<img id="fullscreen_image">
@@ -118,6 +427,30 @@
 		</div>
 
 		<script>
+			window.onbeforeunload = function () {
+				window.scrollTo(0, 0);
+			}
+			
+
+			document.getElementById("header_button").addEventListener("click", () => {
+				window.scrollTo({
+				top: 99999,
+				behavior: 'smooth',
+				});
+
+				setTimeout(function(){
+					window.scrollTo(0, 0);
+					document.getElementById("dni_div").style.display = "block";
+					document.querySelector('header').style.opacity = "0";
+					setTimeout(function(){
+						document.getElementById("dni_div").style.opacity = "1";
+					}, 100)
+					
+				}, 1000)
+				
+			})
+			
+
 			function scrollToImage(el) {
 				var id = el.id;
 				const imageElement = document.getElementById(transformString(id));
@@ -129,6 +462,10 @@
 				const transformedString = `h4_${parts[2]}`;
 				return transformedString;
 			}
+
+			window.addEventListener("scroll", () => {
+				Array.from(document.getElementsByTagName("h1"))[0].style.marginTop = (window.pageYOffset/2) + "px";
+			})
 		  </script>
 
 		<script src="scripts/header.js"></script>

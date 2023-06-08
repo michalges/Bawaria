@@ -1,0 +1,18 @@
+d1:
+monachium
+nymphenburg
+
+d2:
+neuschwamstein
+wies
+fu..ssen - wodospad
+oberammergau
+
+d3:
+partnach
+ettal
+linderhof
+
+d4:
+chiemsee
+salzburg
