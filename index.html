@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="styles/header.css">
 		<link rel="stylesheet" href="styles/sections.css">
 		<link rel="stylesheet" href="styles/fullscreenImage.css">
+		<link rel="stylesheet" href="styles/tipy.css">
 	</head>
 	<body>
 		<header>
@@ -21,9 +22,10 @@
 			<h2>Dzień 1</h2>
 			<div class="dzien_div">
 				<div class="card" onclick="show_section('section_monachium')">
-					<img src="graphics/zdjecia/Dzien 1/Monachium/main.JPG">
+					<img src="graphics/zdjecia/Dzien 1/Monachium/IMG_20230522_121219.jpg">
 					<h5>Monachium</h5>
-					<p>Opis Monachium</p>
+					<p>Monachium, stolica Bawarii, jest barwnym i żywym miastem. Co roku zjeżdża tu mnóstwo turystów, nie tylko na październikowy Oktoberfest.
+					Jest to miasto pełne zabytków, ale także nowoczesny ośrodek, w którym nieprzerwanie tętni życie.</p>
 					<div></div>
 				</div>
 				<div class="card" onclick="show_section('section_nymphenburg')">
@@ -53,14 +55,14 @@
 					<div></div>
 				</div>
 				<div class="card" onclick="show_section('section_fussen')">
-					<img src="graphics/zdjecia/Dzien 2/Fussen/8.jpg">
+					<img src="graphics/zdjecia/Dzien 2/Fussen/1686257676614.jpg">
 					<h5>Füssen</h5>
 					<p>Füssen to niewielkie bawarskie miasto położone zaledwie kilometr od granicy z Austrią. Jest znane nie tylko z barokowego klasztoru oraz zamku obronnego, ale i również z podliskich wodospadów i wąwozów.
 					Początkowo wspomagały one pracę lokalnych młynów, a dziś są częścią systemu pozyskiwania energii. Wśród nich zjawiskowy wodospad Lechfall, który intryguje swoim kształtem przypominającym schody oraz jasno niebieskim kolorem wody.</p>
 					<div></div>
 				</div>
 				<div class="card" onclick="show_section('section_oberammergau')">
-					<img src="graphics/zdjecia/Dzien 2/Oberammergau/Obberammerghau (3).jpg">
+					<img src="graphics/zdjecia/Dzien 2/Oberammergau/1686309054574.jpg">
 					<h5>Oberammergau</h5>
 					<p>W alpejskim miasteczku Oberammergau dominuje typowa bawarska zabudowa – piętrowe lub dwupiętrowe białe domy ze spadzistymi dachami, drewnianymi balkonami, okiennicami. Elewacje wielu budynków ożywiają kolorowe malowidła. 
 					Przedstawiają one wydarzenia religijne, sztukę pasyjną, ale też wiele mówią o nazwiskach czy zawodach właścicieli domów. Oberammergau warto również odwiedzić dla barokowego kościóła św. Piotra i Pawła.</p>
@@ -103,13 +105,24 @@
 					<div></div>
 				</div>
 				<div class="card" onclick="show_section('section_salzburg')">
-					<img src="graphics/photos/residenz-muenchen_festsaalbau.jpg">
+					<img src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (49).JPG">
 					<h5>Salzburg</h5>
-					<p>Opis salzburg</p>
+					<p>Salzburg zalicza się do najsłynniejszych miast kultury na świecie. Jego zabudowę tworzą głównie kościoły, twierdze, zamki i pałace. 
+					Nikogo nie dziwi fakt, że miasto Mozarta figuruje na liście Światowego Dziedzictwa Kultury UNESCO.</p>
 					<div></div>
 				</div>
 			</div>
 			<div style="width: 100%; height: 3vw;"></div>
+
+			<div id="tip1" class="tip_div">
+				<div class="tip_content">
+					<p>Naciśnij na dowolny zabytek aby dowiedzieć się o nim więcej!</p>
+				</div>
+				<div  class="loading_bar_div">
+					<div id="tip1_loading_bar" class="loading_bar"></div>
+				</div>
+				<button id="button_tip1"></button>
+			</div>
 		</div>
 
 		<footer></footer>
@@ -238,7 +251,7 @@
 				<div class="atrakcja_square_img">
 					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (4).jpg">
 					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (5).jpg">
-					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/Neuschwamstein (5).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Neuschwamstein/1686257727523.jpg">
 				</div>
 				<div style="width: 100%; height: 3vw;"></div>
 			</div>
@@ -274,6 +287,7 @@
 				<div class="atrakcja_square_img">
 					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Fussen/8.jpg">
 					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Fussen/9.jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 2/Fussen/1686257676614.jpg">
 				</div>
 				<div style="width: 100%; height: 3vw;"></div>
 			</div>
@@ -390,14 +404,14 @@
 				<p class="atrakcja_opis">Pałac Herrenchiemsee (Schloss Herrenchiemsee) jest najmłodszą z trzech rezydencji zbudowanych przez Ludwika II Wittelsbacha. Kompleks powstał na wyspie Herrenchiemsee nad Jeziorem Chiemsee. 
 				W porównaniu do Zamku Neuschwanstein i Pałacu Linderhof, wzorowany na pałacu w Wersalu, Herrenchiemsee nie wyróżnia się tak mocno zewnętrzną fasadą. Jednak w środku można odnaleźć prawdziwe skarby i dzieła sztuki.</p>
 				<div class="atrakcja_square_img">
-					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (1).jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (3).jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (5).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (1).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (3).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (5).jpg">
 				</div>
 				<div class="atrakcja_square_img">
-					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (6).jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (7).jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (8).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (6).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (7).jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/herrenchimsee/Herrenchimsee (8).jpg">
 				</div>
 				<div style="width: 100%; height: 3vw;"></div>
 			</div>
@@ -407,17 +421,56 @@
 			<div class="section_content">
 				<h3>Salzburg</h3>
 				<div style="width: 100%; height: 2vw;"></div>
-				<p class="atrakcja_opis">tak</p>
+				<p class="atrakcja_opis">Salzburg zalicza się do najsłynniejszych miast kultury na świecie. Jego zabudowę tworzą głównie kościoły, twierdze, zamki i pałace. 
+				Nikogo nie dziwi fakt, że miasto Mozarta figuruje na liście Światowego Dziedzictwa Kultury UNESCO.</p>
 				<div class="atrakcja_square_img">
-					<img onclick="fullscreenImage(this)" src="graphics/photos/residenz-muenchen.jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/photos/Muenchen-Residenz-bjs-1.jpg">
-					<img onclick="fullscreenImage(this)" src="graphics/photos/residenz-muenchen_festsaalbau.jpg">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (10).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (11).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (15).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (17).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (18).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (20).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (21).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (22).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (26).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (28).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (31).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (34).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (36).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (37).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (39).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (40).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (42).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (44).JPG">
+				</div>
+				<div class="atrakcja_square_img">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (46).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (47).JPG">
+					<img onclick="fullscreenImage(this)" loading="lazy" src="graphics/zdjecia/Dzien 4/Salzburg/Salzburg (49).JPG">
 				</div>
 				<div style="width: 100%; height: 3vw;"></div>
 			</div>
 		</section>
 
-
+		<div id="tip2" class="tip_div">
+			<div class="tip_content">
+				<p>Naciśnij na dowolne zdjęcie aby je powiększyć!</p>
+			</div>
+			<div  class="loading_bar_div">
+				<div id="tip2_loading_bar" class="loading_bar"></div>
+			</div>
+			<button id="button_tip2"></button>
+		</div>
 
 		
 
@@ -444,6 +497,9 @@
 					document.querySelector('header').style.opacity = "0";
 					setTimeout(function(){
 						document.getElementById("dni_div").style.opacity = "1";
+						setTimeout(function(){
+							show_tip1();
+						}, 1000)
 					}, 100)
 					
 				}, 1000)
@@ -471,5 +527,6 @@
 		<script src="scripts/header.js"></script>
 		<script src="scripts/sections.js"></script>
 		<script src="scripts/fullscreenImage.js"></script>
+		<script src="scripts/tipy.js"></script>
 	</body>
 </html>

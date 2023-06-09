@@ -22,4 +22,7 @@ sectionHideButtonsArray.forEach(function(el){
     })
 })
 
-function show_section(section_name_x){document.getElementById(section_name_x).style.top = "0";}
+function show_section(section_name_x){
+    document.getElementById(section_name_x).style.top = "0";
+    setTimeout(() => {show_tip2()}, 1000);
+}
