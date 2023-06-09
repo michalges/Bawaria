@@ -481,7 +481,9 @@
 		
 
 		<div id="loading-screen">
-			<p id="loading-message">Ładowanie...</p>
+			<p class="loading-message">trwa ładowanie</p>
+			<p class="loading-message" id="ład2">to może chwilę zająć</p>
+			<p id="skip">Za długo czekasz? - <a id="skiping">pomiń proces</a></p>
 		  </div>
 		  <style>
 			/* Styling for the loading screen */
@@ -495,25 +497,47 @@
 			  display: flex;
 			  justify-content: center;
 			  align-items: center;
+			  flex-direction: column;
 			  transition: 1s;
 			  z-index: 999999999;
 			}
 		
-			#loading-message {
+		.loading-message {
 			  font-size: 24px;
 			  color: #333;
 			  text-align: center;
+			  padding: 5px;
+			}
+
+			#ład2{
+				font-size: 20px
+			}
+
+			#skip{
+				font-size: 10px;
+				margin-top: 30px;
+			}
+
+			#skiping{
+				text-decoration: underline;
+				color: blue;
 			}
 		  </style>
 		  <script>
+			var loadingScreen = document.getElementById('loading-screen');
 			// Hide the loading screen when the page is fully loaded
 			window.addEventListener('load', function() {
-			  var loadingScreen = document.getElementById('loading-screen');
+			  
 
 			  	loadingScreen.style.opacity = "0";
-				  setTimeout(() => {loadingScreen.style.display = 'none';}, 1000);
+				setTimeout(() => {loadingScreen.style.display = 'none';}, 1000);
 			  	
 			});
+
+			document.getElementById("skiping").addEventListener("click", () => {
+				loadingScreen.style.display = 'none';
+				console.log("safsafds");
+			})
 		  </script>
 
 
